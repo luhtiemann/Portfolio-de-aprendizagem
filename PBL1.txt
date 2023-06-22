@@ -1,0 +1,64 @@
+Portifólio de aprendizagem
+
+Objetivo: O objetivo desta atividade é a criação de um portifólio de aprendizagem que apresente os conteúdos e atividades práticas dos estudantes durante as aulas.
+
+Passos 1 - Exemplos em Sala:
+
+Criar uma estrutura de código que permita a apresentação da evolução dos exemplos vistos ao longo das aulas, bem como dos novos temas apresentados.
+Apresentar os códigos (com os respectivos comentários) dos exemplos vistos em sala, bem como das atividades propostas (Criação das páginas complementares para cada exemplo).
+Passo 2 - Desenvolvimento de Módulos com o Flask Blueprint:
+
+Módulos que serão sorteados:
+
+Auth (Páginas de login e registro);
+Registro - Inputs: Nome completo, nome de usuário, email, senha, confirmação de senha;
+Login - Inputs: email ou nome de usuário, senha;
+Admin - Pessoas - páginas de registro e listagem (Clientes, Funcionários Garçon, Funcionário Serviços Gerais);
+Clientes - Inputs: nome, cpf, sexo, data de nascimento, data de cadastro;
+Funcionários Garçom - Inputs: nome, cpf, sexo, data de nascimento, data de cadastro, email, telefone, valor hora;
+Funcionários Serviços Gerais - Inputs: nome, cpf, sexo, data de nascimento, data de cadastro, email, telefone, salário;
+Admin - Produtos - páginas de registro e listagem (Produtos e Ingredientes);
+Produtos - Inputs: nome, descrição, valor, quantidade (estoque);
+Ingredientes - Inputs: nome, quantidade (estoque);
+Admin - Comandas - páginas de registro e listagem (Comandas e Pedidos);
+Comandas - Inputs: Código do cliente, data da comanda, situação (paga ou não);
+Pedidos - Inputs: Código da comanda, produto, quantidade, código do garçom, data e horário;
+Admin - Cobrança - páginas de registro e listagem (Cobrança das Comandas e Formas de Pagamento);
+Forma de Pagamento - Inputs: Nome da forma de pagamento, data de cadastro, descrição;
+Cobrança - Inputs: Data e hora da cobrança, número da comanda, valor total, forma(s) de pagamento;
+Admin - Pagamentos Funcionários - paginas de registro e listagem (Pagamentos e Registro de Horas;
+Registro de Horas - Inputs: Código do Garçom, número de horas e data/hora do registro;
+Pagamentos - Inputs: Código do funcionário, valor total do pagamento, data do pagamento;
+Admin - IOT- páginas de registro e listagem (Sensores e Atuadores);
+Sensores - Inputs: Nome do sensor, unidade de medida do sensor, data de aquisição, valor e descrição;
+Atuadores - Inputs: Nome do atuador, tipo de atuacão (Movimentom luz, energia, etc), data de aquisição, valor e descrição. 
+Entregas:
+
+Criar o módulo específico sorteado em sala, utilizando o Flask Blueprints.
+Avaliação: Os alunos serão avaliados com base na originalidade do portifólio apresentado. Neste primeiro momento, não é necessária a utilização de um design específico.
+
+Template base para o passo 2 do portifólio
+
+restaurant.rar Download restaurant.rar 
+
+Template básico para a criação dos módulos específicos da aplicação do restaurante seguindo a arquitetura a seguir.
+/restaurant
+/controllers
+module_name_controller.py
+/models
+/static
+/css
+/img
+/js
+views
+/module_name
+base.html
+index.html
+app.py
+Todos os módulos foram criados na pasta controllers e importados no arquivo principal app.py.  
+A pasta models será usada posteriormente para armazenar os modelos utilizados na persistência dos dados no banco de dados.
+Todos os módulos foram configurados para terem a pasta views como sendo a diretório dos templates, assim, os templates específicos de cada módulo deverão ficar dentro da pasta views, no subdiretório com o nome do respectivo módulo.
+Todos os módulos foram configurados para terem a pasta static como sendo a diretório dos arquivos estáticos, para que seja possível a reutilização de algum arquivo, se necessário.
+Foi adicionando um módulo de exemplo chamado base_controller.py, assim, os seus templates foram inseridos no diretório views/base/. Neste exemplo foi adicionado um formulário padrão do bootstrap para servir como base na criação dos formulários. No entando, caso queira outro design, pode ser incorporado tranquilamente.
+Para facilitar a reutilização dos modulos posteriormente, tente sempre adicionar o prefixo do modulo nas funcões que representam as páginas do modulo.
+Exemplos: def base_index(), def base_register(), def base_list(), def base_example()
