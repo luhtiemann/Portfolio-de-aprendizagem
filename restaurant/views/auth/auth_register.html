@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+{% block content %} 
+
+
+<div class="vertical-center">
+    <div class="container forms shadow-sm p-3 mb-5 bg-white border border-secondary rounded">
+
+        <div class="perfeito">
+            <h1>Registrar</h1>
+        </div><br>
+        <form action="/auth/save" method="POST" class="row g-3 justify-content-center">
+            <div class="col-12">
+                <label for="inputName" class="form-label">Nome completo</label>
+                <input type="text" class="form-control" id="inputName" name="inputName">
+            </div>
+            <div class="col-md-6">
+                <label for="inputUsername" class="form-label">Nome do usuário</label>
+                <input type="text" class="form-control" id="inputUsername" name="inputUsername">
+            </div>
+            <div class="col-md-6">
+                <label for="inputEmail" class="form-label">Email</label>
+                <input type="text" class="form-control" id="inputEmail" name="inputEmail" >
+            </div>
+            <div class="col-md-6">
+                <label for="inputPassword" class="form-label">Senha</label>
+                <input type="password" class="form-control" id="inputPassword" name="inputPassword" >
+            </div>
+            <div class="col-md-6">
+                <label for="inputConfirmPassword" class="form-label">Confirmar senha</label>
+                <input type="password" class="form-control" id="inputConfirmPassword" name="inputConfirmPassword">
+            </div>
+            
+            <div class="perfect">
+                <br>
+                <button type="submit" class="btn btn-primary">Registrar</button>
+            </div>
+        </form>
+    </div>
+</div>
+{% endblock %}

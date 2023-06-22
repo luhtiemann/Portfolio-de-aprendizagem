@@ -1,0 +1,28 @@
+
+.container .forms{
+    margin-top: 40px;
+    padding-top: 50px;
+    border-color: black;
+}
+.vertical-center {
+    min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
+    min-height: 100vh; /* These two lines are counted as one :-)       */
+  
+    display: flex;
+    align-items: center;
+  }
+
+.perfeito{
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    
+}  
+
+
+.error {
+    color: white;
+    background-color: red;
+    padding: 10px;
+    margin-bottom: 10px;
+}

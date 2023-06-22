@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>Cadastros</h1>
+<br>
+    <ul>
+        {% for register in registers %} <!--lista pedidos-->
+        <li>{{register}}</li>
+        {%endfor%}
+    </ul> 
+{% endblock %}
